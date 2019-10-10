@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row mb-5">
+    <div class="col">
+      <h3>
+        <!-- ((TimeLeft*100)/8 -->
+        TEMPO RIMASTO: {{(TimeLeft)-8}} secondi
+      </h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <!-- TimeLeft -->
+      <mat-progress-bar mode="determinate" [value]="(TimeLeft*100)/8"></mat-progress-bar>
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col">
+      <h2>{{Question.question}}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <input type="number" class="form-control" id="result" aria-describedby="result" placeholder="Enter result">
+    </div>
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="AnswerQuestion()">Answer Question</button>
+    </div>
+  </div>
+</div>

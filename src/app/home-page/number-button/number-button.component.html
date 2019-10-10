@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <button type="button" class="btn" *ngFor="let numberObj of numbers; index as i; trackBy: trackByFn" [ngClass]="{'btn-primary': numberObj.selected,
+    'btn-outline-primary': !numberObj.selected}" (click)="numberSelected(numberObj,i)">{{numberObj.value}}</button>
+    </div>
+    <h2><a [routerLink]="['/questions']">Start Questions</a></h2>
+  </div>
+</div>
